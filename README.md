@@ -17,14 +17,55 @@ Linux: ~/.AndroidStudio<version>/config/templates
 MacOS: ~/Library/Preferences/AndroidStudio<version>/templates
 # Usage
 
-gxcon - to create GetxController
+# gxcon - to create GetxController
 
-gxvwb - to create GetView with GetBuilder and GetxController
+class $NAME$PageController extends GetxController {
+    $END$
+}
 
-gxv - to create GetView
+# gxvwb - to create GetView with GetBuilder and GetxController
 
-gxbind - to create Bindings
+class $NAME$Page extends GetView<$NAME$PageController> {
+  @override
+  Widget build(BuildContext context) {
+    return GetBuilder<$NAME$PageController>(
+     builder: (value) => Scaffold(
+        body: Container($END$),
+      ),
+    );
+  }
+}
 
-gxlput - to put GetxController to Binding lazyly
+class $NAME$PageController extends GetxController {}
+
+
+# gxv - to create GetView with GetxController
+
+class $PAGE_NAME$Page
+    extends GetView<$PAGE_NAME$PageController> {
+ @override
+  Widget build(BuildContext context) {
+    return Container($END$);
+  }
+}
+class $PAGE_NAME$PageController extends GetxController {}
+
+
+# gxbind - to create Bindings
+
+class $BUNDING_NAME$ implements Bindings {
+  @override
+  void dependencies() {
+    // TODO: implement dependencies
+  }
+}
+
+
+# gxlzput - to put GetxController to Binding lazyly
+
+Get.lazyPut<$CONTROLLER_NAME$>(
+    () => $CONTROLLER_NAME$(),
+    fenix: true,
+);
 
 # Enjoy it!
