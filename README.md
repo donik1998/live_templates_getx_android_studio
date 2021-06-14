@@ -6,6 +6,25 @@ In this repo you can find handy live templates to shape up your UI faster.
 In order to install them you need to download xml file in the root of this repo and place it inside templates folder of Android Studio.
 Depending on OS you are using the path to templates folder may differ. Here are paths:
 Windows:<your_user_home_directory>\.AndroidStudio<version_number>\config\templates
+
+
+
+
 Linux: ~/.AndroidStudio<version>/config/templates
+
+
+
 MacOS: ~/Library/Preferences/AndroidStudio<version>/templates
+# Usage
+
+gxcon - to create GetxController
+
+gxvwb - to create GetView with GetBuilder and GetxController
+
+gxv - to create GetView
+
+gxbind - to create Bindings
+
+gxlput - to put GetxController to Binding lazyly
+
 # Enjoy it!
